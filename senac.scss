@@ -1,0 +1,76 @@
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$presentation-h1-font-size: 45px;
+$presentation-h2-font-size: 35px;
+$presentation-heading-color: #ea973e;
+
+/*-- scss:rules --*/
+
+$orange: #ea973e;
+$blue: #014A8E;
+$font-family: 'Helvetica Neue', sans-serif;
+
+// Slide de Abertura
+section#title-slide {
+  h1 {
+    font-size: 80px;
+    color: $blue;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-top: 200px;
+    padding-bottom: 1px;
+    position: relative;
+    width: 100%;
+    border-bottom-width: 0px;
+    text-align: center;
+    top: 0;
+  }
+
+  p.subtitle {
+    font-size: 50px;
+    color: $blue;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+section.slide {
+  background: url( 'theme/slide-comum.css' );
+  background-repeat: no-repeat, repeat !important ;
+  background-size: contain;
+  background-color: transparent;
+
+  h1 {
+    color: $orange; 
+    // border-bottom-style: solid; 
+    // border-bottom-width: 3px; 
+    // border-bottom-color: $orange;
+    text-align: right;
+    position: absolute;
+    top: 5%;
+    width: 90%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding:10px;
+      margin-top: 20px;
+      border: 2px solid #000;
+      font-size: 35px; 
+    }
+  }
+}
+
+i {
+  text-align: center;
+}
