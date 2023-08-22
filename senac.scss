@@ -5,8 +5,8 @@
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 $presentation-h1-font-size: 45px;
-$presentation-h2-font-size: 35px;
-$presentation-heading-color: #ea973e;
+$presentation-h2-font-size: 45px;
+//$presentation-heading-color: #ea973e;
 
 /*-- scss:rules --*/
 
@@ -42,31 +42,28 @@ section#title-slide {
 }
 
 section.slide {
-  background: url( 'theme/slide-comum.css' );
-  background-repeat: no-repeat, repeat !important ;
-  background-size: contain;
-  background-color: transparent;
-
-  h1 {
+  h1, h2 {
     color: $orange; 
     // border-bottom-style: solid; 
     // border-bottom-width: 3px; 
     // border-bottom-color: $orange;
     text-align: right;
-    position: absolute;
-    top: 5%;
+    position: relative;
+    top: 0;
     width: 90%;
   }
 
-  ul {
+  ol, ul {
     list-style-type: none;
-    padding: 0;
+    width: 100%;
 
     li {
       padding:10px;
+      margin-right:50px;
       margin-top: 20px;
       border: 2px solid #000;
       font-size: 35px; 
+      width: 95%;
     }
   }
 }
