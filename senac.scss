@@ -3,16 +3,22 @@
 /*-- scss:defaults --*/
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
 $presentation-h1-font-size: 45px;
 $presentation-h2-font-size: 45px;
-//$presentation-heading-color: #ea973e;
-
-/*-- scss:rules --*/
-
 $orange: #ea973e;
 $blue: #014A8E;
 $font-family: 'Helvetica Neue', sans-serif;
+
+/*-- scss:rules --*/
+
+.slide-background-content {
+  // https://github.com/hakimel/reveal.js/issues/566
+  background: url('https://raw.githubusercontent.com/celsocrivelaro/senac-theme/main/slide-comum.png');
+  background-size: contain !important;
+  // /* the following are for firefox 70 */
+  opacity:1 !important;
+  z-index:1 !important;
+}
 
 // Slide de Abertura
 section#title-slide {
@@ -41,30 +47,28 @@ section#title-slide {
   }
 }
 
-section.slide {
-  h1, h2 {
-    color: $orange;
-    text-align: right;
-    position: relative;
-    top: 0;
-    width: 90%;
-  }
-
-  ol, ul {
-    list-style-type: none;
-    width: 100%;
-
-    li {
-      padding:10px;
-      margin-right:50px;
-      margin-top: 20px;
-      border: 2px solid #000;
-      font-size: 35px; 
-      width: 95%;
+section {
+  .slide {
+    h1, h2 {
+      color: $orange;
+      text-align: right;
+      position: relative;
+      top: 0;
+      width: 90%;
     }
-  }
-}
 
-i {
-  text-align: center;
+    ol, ul {
+      list-style-type: none;
+      width: 100%;
+
+      li {
+        padding:10px;
+        margin-right:50px;
+        margin-top: 20px;
+        border: 2px solid #000;
+        font-size: 35px; 
+        width: 95%;
+      }
+    }
+  } 
 }
