@@ -1,16 +1,18 @@
-@import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
+// @import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
 
 /*-- scss:defaults --*/
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: Arial, sans-serif !default;
+$font-family: Arial, sans-serif;
 $presentation-h1-font-size: 45px;
 $presentation-h2-font-size: 45px;
 $orange: #ea973e;
 $blue: #014A8E;
-$font-family: 'Helvetica Neue', sans-serif;
+
 
 /*-- scss:rules --*/
-# https://github.com/hakimel/reveal.js/blob/680cf5edb8092801efb3e8756418829db86f7895/js/controllers/backgrounds.js#L296C4-L296C4
+// https://github.com/hakimel/reveal.js/blob/680cf5edb8092801efb3e8756418829db86f7895/js/controllers/backgrounds.js#L296C4-L296C4
 .slide-background-content {
   // https://github.com/hakimel/reveal.js/issues/566
   background: url('https://raw.githubusercontent.com/celsocrivelaro/senac-theme/main/slide-comum.png');
@@ -23,7 +25,8 @@ $font-family: 'Helvetica Neue', sans-serif;
 // Slide de Abertura
 section#title-slide {
   h1 {
-    font-size: 80px;
+    font-size: 60px;
+    font-weight: normal;
     color: $blue;
     margin-top: 1px;
     margin-bottom: 1px;
@@ -37,13 +40,22 @@ section#title-slide {
   }
 
   p.subtitle {
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: bold;
     color: $blue;
-    font-weight: 900;
     margin-top: 10px;
     margin-bottom: 1px;
     padding-top: 1px;
     padding-bottom: 1px;
+  }
+  
+  div.quarto-title-author-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  p.quarto-title-author-name {
+    font-size: 30px;
   }
 }
 
@@ -55,6 +67,7 @@ section {
       position: relative;
       top: 0;
       width: 90%;
+      font-weight: normal;
     }
 
     ol, ul {
@@ -68,7 +81,11 @@ section {
         border: 2px solid #000;
         font-size: 35px; 
         width: 95%;
+
+        strong {
+          font-weight: bolder;
+        }
       }
     }
-  } 
+  }
 }
